@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="myFunction()">Generate</button>
+<p id=ntk></p>
+<script>
+function myFunction() 
+{
+	var length = 30;var result = '[Need-To-Know] ';var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	var charactersLength = characters.length;
+	for (var i = 0; i < length; i++)         
+ 		result += characters.charAt(Math.floor(Math.random() * charactersLength));        
+	navigator.clipboard.writeText(result);
+    document.getElementById("ntk").innerHTML = result + ' </br></br> Copied to clipboard'; 
+}
+</script>
+</body>
+</html>
